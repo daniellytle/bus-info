@@ -10,7 +10,7 @@ var app = new Alexa.app('bus-info');
 var optionsget = {
     host : 'maps.googleapis.com',
     port : 443,
-    path : '/maps/api/directions/json?origin=406+East+Jefferson+,Ann+Arbor&destination=PierpontCommons&mode=transit&key=AIzaSyBh08Vf7_9a7eLWdpidsIkJmR30vNFwEpw',
+    path : '/maps/api/directions/json?origin=CCL+Science+Building&destination=PierpontCommons&mode=transit&key=AIzaSyBh08Vf7_9a7eLWdpidsIkJmR30vNFwEpw',
     method : 'GET'
 };
 
@@ -41,14 +41,14 @@ function resolveData(data) {
   // console.log(data);
 
   var speech = "The next to north leaves ";
-  var bus_deets = data.routes[0].legs[0].steps[1].transit_details;
+  var bus_deets = data.routes[0].legs[0].steps[0].transit_details;
   var bus_name = bus_deets.line.name;
   var depart_time = moment(bus_deets.departure_time.value, 'X').fromNow();
   console.log(bus_deets)
   var depart_stop = bus_deets.departure_stop.name;
   console.log();
 
-  return "The next " + bus_name + " leaves " + depart_time + " from " + depart_stop;
+  return "The next " + bus_name + " leaves " + depart_time + " from CC Little";
 }
 
 app.launch(function(req, res) {
@@ -63,7 +63,7 @@ app.intent('bus',
 , function(req, res) {
     //get the slot
     return getDirections(optionsget).then(function(data) {
-      console.log(data)
+      console.log("lkj", data)
 
       var speech = resolveData(data);
       res.say(speech).send();
