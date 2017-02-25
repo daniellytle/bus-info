@@ -1,0 +1,14 @@
+{
+  "name": "bus-info",
+  "version": "1.0.0",
+  "description": "find next bus",
+  "main": "index.js",
+  "author": "Daniel Wilson",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-app": "latest",
+    "lodash": "^4.3.0",
+    "moment": "^2.17.1",
+    "request-promise": "^2.0.0"
+  }
+}
