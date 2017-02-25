@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "alexa-app-server": "^2.2.4",
-    "alexa-app": "^2.3.2",
+    "alexa-app": "latest",
     "lodash": "^4.3.0",
     "request-promise": "^2.0.0"
   }
