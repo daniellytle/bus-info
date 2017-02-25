@@ -10,7 +10,7 @@ var app = new Alexa.app('bus-info');
 var optionsget = {
     host : 'maps.googleapis.com',
     port : 443,
-    path : '/maps/api/directions/json?origin=AnnArbor&destination=PierpontCommons&mode=transit&key=AIzaSyBh08Vf7_9a7eLWdpidsIkJmR30vNFwEpw',
+    path : '/maps/api/directions/json?origin=406+East+Jefferson+,Ann+Arbor&destination=PierpontCommons&mode=transit&key=AIzaSyBh08Vf7_9a7eLWdpidsIkJmR30vNFwEpw',
     method : 'GET'
 };
 
@@ -39,6 +39,7 @@ function getDirections(optionsget) {
 
 function resolveData(data) {
   // console.log(data);
+
   var speech = "The next to north leaves ";
   var bus_deets = data.routes[0].legs[0].steps[1].transit_details;
   var bus_name = bus_deets.line.name;
@@ -62,6 +63,8 @@ app.intent('bus',
 , function(req, res) {
     //get the slot
     return getDirections(optionsget).then(function(data) {
+      console.log(data)
+
       var speech = resolveData(data);
       res.say(speech).send();
     });
