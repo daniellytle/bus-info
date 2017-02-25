@@ -52,12 +52,12 @@ function resolveData(data) {
 
 app.launch(function(req, res) {
   var prompt = 'Hello, ask me for bus info';
-  res.say(prompt).reprompt(prompt).shouldEndSession(false);
+  res.say(prompt).shouldEndSession(false);
 });
 
 app.intent('bus',
   {
-    "utterances":[ "get to north" ]
+    "utterances":[ "when is the next bus" ]
   }
 , function(req, res) {
     //get the slot

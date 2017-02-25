@@ -1,10 +1,9 @@
 {
-  "name": "morningyoga",
+  "name": "alexa server",
   "version": "1.0.0",
-  "description": "YogaTrainer",
+  "description": "my alexa server",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/",
     "start": "node server.js"
   },
   "author": "daniel wilson",
