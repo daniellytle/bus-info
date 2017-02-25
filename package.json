@@ -1,5 +1,5 @@
 {
-  "name": "alexa server",
+  "name": "server",
   "version": "1.0.0",
   "description": "my alexa server",
   "main": "index.js",
