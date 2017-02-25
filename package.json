@@ -1,0 +1,18 @@
+{
+  "name": "morningyoga",
+  "version": "1.0.0",
+  "description": "YogaTrainer",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/",
+    "start": "node server.js"
+  },
+  "author": "daniel wilson",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-app-server": "^2.2.4",
+    "alexa-app": "^2.3.2",
+    "lodash": "^4.3.0",
+    "request-promise": "^2.0.0"
+  }
+}
