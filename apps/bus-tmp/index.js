@@ -48,7 +48,7 @@ function resolveData(data) {
   var depart_stop = bus_deets.departure_stop.name;
   console.log();
 
-  return "The next " + bus_name + " leaves " + depart_time + " from CC Little";
+  return "The next " + bus_name + " leaves CC Little " + depart_time;
 }
 
 app.launch(function(req, res) {
