@@ -52,7 +52,7 @@ function resolveData(data) {
 }
 
 app.launch(function(req, res) {
-  var prompt = 'Hello, ask me for bus info';
+  var prompt = 'Hello, ask me for the next bus leaving CC Little';
   res.say(prompt).shouldEndSession(false);
 });
 
