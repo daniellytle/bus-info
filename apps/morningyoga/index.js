@@ -19,7 +19,7 @@ app.launch(function(req, res) {
 app.intent('start',
   {
     "slots": { "type": "SESSION_TYPE" },
-    "utterances":[ "Start a {type} session" ]
+    "utterances":[ "Start a session" ]
   }
 , function(req, res) {
     //get the slot
